@@ -1,0 +1,108 @@
+/* ── Reset & page layout ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;    /* center left-right */
+  align-items: center;         /* center top-bottom */
+  background-color: #1a1a2e;  /* dark blue background */
+  font-family: Arial, sans-serif;
+}
+
+/* ── Calculator container ── */
+.calculator {
+  background-color: #16213e;
+  border-radius: 16px;
+  padding: 24px;
+  width: 320px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Display screen ── */
+.display {
+  background-color: #0f3460;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+/* Small text showing the current expression e.g. "5 +" */
+.display .expression {
+  color: #a0aec0;
+  font-size: 14px;
+  min-height: 20px;      /* keeps space even when empty */
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+
+/* Big text showing the current number */
+.display .result {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+/* ── Button grid ── */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 4 equal columns */
+  gap: 12px;
+}
+
+/* ── All buttons share these styles ── */
+button {
+  padding: 18px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.1s;
+}
+
+/* Slight press effect when clicked */
+button:active {
+  transform: scale(0.95);
+  opacity: 0.85;
+}
+
+/* Hover effect */
+button:hover {
+  filter: brightness(1.2);
+}
+
+/* Number buttons (0-9 and .) */
+.btn-number {
+  background-color: #1a1a3e;
+  color: #ffffff;
+}
+
+/* Operator buttons (+, -, ×, ÷) */
+.btn-operator {
+  background-color: #e94560;
+  color: #ffffff;
+}
+
+/* Utility buttons (AC, +/-, %) */
+.btn-utility {
+  background-color: #533483;
+  color: #ffffff;
+}
+
+/* Equals button */
+.btn-equals {
+  background-color: #e94560;
+  color: #ffffff;
+}
+
+/* Make the 0 button span 2 columns */
+.btn-zero {
+  grid-column: span 2;
+}
