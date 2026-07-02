@@ -1,4 +1,4 @@
-/* center everything on the page */
+
 body {
   display: flex;
   justify-content: center;
@@ -9,7 +9,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* the calculator box */
+
 .calculator {
   background-color: #1e2b38;
   padding: 20px;
@@ -17,7 +17,7 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* the screen where numbers show up */
+
 #display {
   width: 100%;
   height: 50px;
@@ -31,14 +31,14 @@ body {
   background-color: #ffffff;
 }
 
-/* arrange buttons in a 4-column grid */
+
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 60px);
   gap: 10px;
 }
 
-/* basic style for every button */
+
 button {
   height: 60px;
   font-size: 18px;
@@ -53,7 +53,7 @@ button:hover {
   background-color: #46627f;
 }
 
-/* operator buttons like +, -, *, / stand out in orange */
+
 .operator {
   background-color: #e67e22;
 }
