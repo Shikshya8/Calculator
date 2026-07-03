@@ -19,8 +19,7 @@ function deleteLast() {
 function calculateResult() {
   if (!isOn) return;
   try {
-    // swap "sin(" with "sinDeg(" (and same for cos/tan) before solving,
-    // since eval() only understands real JS function names, not made-up words
+
     let expression = display.value;
     expression = expression.replaceAll('sin(', 'sinDeg(');
     expression = expression.replaceAll('cos(', 'cosDeg(');
@@ -63,12 +62,12 @@ function calculateRoot() {
   display.value = Math.sqrt(number);
 }
 
-// converts degrees to radians, since JS Math functions only understand radians
+
 function degreesToRadians(degrees) {
   return degrees * (Math.PI / 180);
 }
 
-// helper functions used by calculateResult() to handle sin/cos/tan
+
 function sinDeg(degrees) {
   return Math.sin(degreesToRadians(degrees));
 }
