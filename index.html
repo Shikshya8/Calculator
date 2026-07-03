@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Simple Calculator</title>
-
+  <!-- linking our CSS file -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="calculator">
 
-
+    
     <input type="text" id="display" disabled>
 
     
@@ -33,13 +33,26 @@
       <button onclick="appendValue('1')">1</button>
       <button onclick="appendValue('2')">2</button>
       <button onclick="appendValue('3')">3</button>
-      <button onclick="calculateResult()" class="equals">=</button>
 
+      <button onclick="calculateResult()" class="equals">=</button>
+      <button onclick="convertToBinary()" class="operator">BIN</button>
+<button onclick="calculatePower()" class="operator">x^y</button>
+<button onclick="calculateRoot()" class="operator">√x</button>
+ <button onclick="appendValue('.')">.</button>
+
+
+<button onclick="appendValue('sin(')" class="operator">sin</button>
+<button onclick="appendValue('cos(')" class="operator">cos</button>
+<button onclick="appendValue('tan(')" class="operator">tan</button>
+<button onclick="appendValue(')')" class="operator">)</button>
+<button onclick="togglePower()" class="power-btn">⏻</button>
       <button onclick="appendValue('0')" class="zero">0</button>
-      <button onclick="appendValue('.')">.</button>
+    
     </div>
 
   </div>
+
+ 
   <script src="script.js"></script>
 </body>
 </html>
